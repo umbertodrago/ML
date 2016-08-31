@@ -7,13 +7,10 @@
 using namespace std;
 
 namespace mnist {
-    
     typedef struct node {
         vector<double> image;
         int label;
     } mnist_node;
-    
 }
-
 
 #endif /* mnist_hpp */
