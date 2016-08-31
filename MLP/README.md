@@ -4,9 +4,9 @@ The code has been implemented as the one described in the book of Michael A. Nie
 
 <h2>Output Example</h2>
 
-Reading MNIST files...__
-Creating MLP...__
-training set size: 50000__
+Reading MNIST files...  
+Creating MLP...  
+training set size: 50000  
 test set size: 10000
 Start SGD
 Epoch 0: 90.62%
