@@ -47,6 +47,8 @@ MLP::MLP(vector<int> sizes){
     }
 }
 
+MLP::~MLP(){}
+
 vector<double> MLP::sigmoid(vector<double> z){
     vector<double> res(z.size());
     for (int i = 0; i < z.size(); i++){
@@ -70,7 +72,6 @@ void MLP::cost_derivative(vector<double> &a, vector<double> &l, vector<double> &
     cblas_daxpy(N, -1, &l[0], 1, &r[0], 1);
 }
 
-
 void MLP::BP1(vector<double> &a, vector<double> &y, vector<double> &z, vector<double> & r, int N){
     vector<double> s = sigmoid_prime(z);
     vector<double> rint(N);
@@ -93,7 +94,6 @@ void MLP::BP3(vector<double> &d, vector<double> &r, int N){
 void MLP::BP4(vector<double> &d, int d_rows, int d_cols, vector<double> &at, int at_cols, vector<double> &r){
     cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, d_rows, at_cols, d_cols, 1, &d[0], d_cols, &at[0], at_cols, 0, &r[0], at_cols);
 }
-
 
 void MLP::feedforward(vector<double> &input, vector<double> &output){
     
@@ -186,7 +186,6 @@ void MLP::backprop(vector<double> image, int label, vector<vector<double>> &dnw,
     dnw = nabla_w; dnb = nabla_b;
 }
 
-
 void MLP::update_minibatch(vector<mnist_node> minibatch, int mb_size, float eta){
     vector<vector<double>> nb(num_layers_ - 1);
     vector<vector<double>> nw(num_layers_ - 1);
@@ -212,7 +211,6 @@ void MLP::update_minibatch(vector<mnist_node> minibatch, int mb_size, float eta)
         cblas_daxpy(layers_size_[j + 1] * layers_size_[j], alpha, &nw[j][0], 1, &weights_[j][0], 1);
     }
 }
-
 
 void MLP::SGD(vector<mnist_node> training_set, vector<mnist_node> test_set, size_t minibatch_size, int epochs, float eta){
     size_t training_set_size = training_set.size();
@@ -243,26 +241,3 @@ void MLP::SGD(vector<mnist_node> training_set, vector<mnist_node> test_set, size
         cout << "Epoch " << i << ": " << ((float)evaluate(test_set)/test_data_size_) * 100 << "%" << endl;
     }
 }
-
-MLP::~MLP(){}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
