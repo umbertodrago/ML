@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31DED6F81D7770EA00F1CF64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED6F71D7770EA00F1CF64 /* main.cpp */; };
+		31DED7091D77711A00F1CF64 /* DownloadFromUrl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED6FE1D77711A00F1CF64 /* DownloadFromUrl.cpp */; };
+		31DED70A1D77711A00F1CF64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED7001D77711A00F1CF64 /* main.cpp */; };
+		31DED70B1D77711A00F1CF64 /* MLP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED7011D77711A00F1CF64 /* MLP.cpp */; };
+		31DED70C1D77711A00F1CF64 /* mnist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED7031D77711A00F1CF64 /* mnist.cpp */; };
+		31DED70D1D77711A00F1CF64 /* ReadMnist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31DED7051D77711A00F1CF64 /* ReadMnist.cpp */; };
+		31DED7101D77714D00F1CF64 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DED70F1D77714D00F1CF64 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +29,16 @@
 
 /* Begin PBXFileReference section */
 		31DED6F41D7770EA00F1CF64 /* ML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ML; sourceTree = BUILT_PRODUCTS_DIR; };
-		31DED6F71D7770EA00F1CF64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		31DED6FE1D77711A00F1CF64 /* DownloadFromUrl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DownloadFromUrl.cpp; sourceTree = "<group>"; };
+		31DED6FF1D77711A00F1CF64 /* DownloadFromUrl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DownloadFromUrl.hpp; sourceTree = "<group>"; };
+		31DED7001D77711A00F1CF64 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		31DED7011D77711A00F1CF64 /* MLP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MLP.cpp; sourceTree = "<group>"; };
+		31DED7021D77711A00F1CF64 /* MLP.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MLP.hpp; sourceTree = "<group>"; };
+		31DED7031D77711A00F1CF64 /* mnist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mnist.cpp; sourceTree = "<group>"; };
+		31DED7041D77711A00F1CF64 /* mnist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mnist.hpp; sourceTree = "<group>"; };
+		31DED7051D77711A00F1CF64 /* ReadMnist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReadMnist.cpp; sourceTree = "<group>"; };
+		31DED7061D77711A00F1CF64 /* ReadMnist.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ReadMnist.hpp; sourceTree = "<group>"; };
+		31DED70F1D77714D00F1CF64 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DED7101D77714D00F1CF64 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,7 @@
 		31DED6EB1D7770E900F1CF64 = {
 			isa = PBXGroup;
 			children = (
+				31DED70F1D77714D00F1CF64 /* Accelerate.framework */,
 				31DED6F61D7770EA00F1CF64 /* ML */,
 				31DED6F51D7770EA00F1CF64 /* Products */,
 			);
@@ -57,7 +73,15 @@
 		31DED6F61D7770EA00F1CF64 /* ML */ = {
 			isa = PBXGroup;
 			children = (
-				31DED6F71D7770EA00F1CF64 /* main.cpp */,
+				31DED6FE1D77711A00F1CF64 /* DownloadFromUrl.cpp */,
+				31DED6FF1D77711A00F1CF64 /* DownloadFromUrl.hpp */,
+				31DED7001D77711A00F1CF64 /* main.cpp */,
+				31DED7011D77711A00F1CF64 /* MLP.cpp */,
+				31DED7021D77711A00F1CF64 /* MLP.hpp */,
+				31DED7031D77711A00F1CF64 /* mnist.cpp */,
+				31DED7041D77711A00F1CF64 /* mnist.hpp */,
+				31DED7051D77711A00F1CF64 /* ReadMnist.cpp */,
+				31DED7061D77711A00F1CF64 /* ReadMnist.hpp */,
 			);
 			path = ML;
 			sourceTree = "<group>";
@@ -118,7 +142,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DED6F81D7770EA00F1CF64 /* main.cpp in Sources */,
+				31DED70B1D77711A00F1CF64 /* MLP.cpp in Sources */,
+				31DED70C1D77711A00F1CF64 /* mnist.cpp in Sources */,
+				31DED70D1D77711A00F1CF64 /* ReadMnist.cpp in Sources */,
+				31DED70A1D77711A00F1CF64 /* main.cpp in Sources */,
+				31DED7091D77711A00F1CF64 /* DownloadFromUrl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +237,7 @@
 		31DED6FC1D7770EA00F1CF64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_LDFLAGS = "-lcurl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +245,7 @@
 		31DED6FD1D7770EA00F1CF64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_LDFLAGS = "-lcurl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
