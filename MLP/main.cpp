@@ -71,28 +71,3 @@ void downloadFiles(string test_labels_name, string test_images_name, string trai
     if (!f4.good())
         dfu.download(train_images_url.c_str(), ctrain_images_name.c_str());
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
