@@ -83,7 +83,8 @@
 				31DED7051D77711A00F1CF64 /* ReadMnist.cpp */,
 				31DED7061D77711A00F1CF64 /* ReadMnist.hpp */,
 			);
-			path = ML;
+			name = ML;
+			path = MLP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
