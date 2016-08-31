@@ -73,27 +73,3 @@ vector<mnist_node> ReadMnist::read(string images_path, int& number_of_images, in
         throw runtime_error("Cannot open file `" + images_path + "`!");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
