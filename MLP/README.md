@@ -1,6 +1,6 @@
 <h1>C++ MLP Neural Network</h1>
 
-The purpose of the NN is to recognize handwritten digits. The training and tests have been done using the MNIST database. The code has been implemented as the simplest network described in the book of Michael A. Nielsen "Neural Networks and Deep Learning".
+The purpose of the NN is to recognize handwritten digits. Both the training and tests are done using the MNIST database. The code has been implemented as the simplest network described in the book of Michael A. Nielsen "Neural Networks and Deep Learning".
 
 <h2>Output Example</h2>
 
